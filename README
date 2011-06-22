@@ -1,0 +1,27 @@
+Introduction:
+  三点の座標から中心（重心）を求める。
+  詳しくはRubyGem版を参照 https://github.com/parrot-studio/geo-triangle
+
+License:
+  The MIT License
+
+Install:
+  jsファイルを設置し、scriptタグで呼んでください。
+  他のライブラリは一切使ってません。
+  （coffeeファイルはソースです）
+
+Usage:
+  var geo = new GeoTriangle(36.383304,139.073632,36.391026,139.075107,36.378536,139.046445);
+  console.log(geo.center()) // => {lat:36.384289, lon:139.065061}
+
+  var geo_error = new GeoTriangle(100, 500, 200, 400, 500, 80.000); // not exist coordinate
+  console.log(geo_error.center()) // => {} return blank object if error
+
+Notice:
+  Ruby版と違い、計算は厳密ではありません。
+  小数点以下6桁程度の精度です。
+  その他、細かい計算を省いているところがあります。
+
+Copyright:
+  Copyright 2011 parrot-studio. See LICENSE.txt for further details. 
+
